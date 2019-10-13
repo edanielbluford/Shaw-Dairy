@@ -1,60 +1,86 @@
-#seating-area{grid-area: seating;}
-#kitchen-area{grid-area: kitchen;}
-#front-left{grid-area:front;}
-#back-left{grid-area:back;}
-
-#left-half{
-    display: grid;
-    grid-template-areas: 'front front back back'
-    'front front back back';
-    padding: .6rem;
-    gap:.625rem ;
+#seating-area {
+  grid-area: seating;
+}
+#kitchen-area {
+  grid-area: kitchen;
+}
+#front-left {
+  grid-area: front;
+}
+#back-left {
+  grid-area: back;
 }
 
-#left-half > #front-left{
-    background-color:rgba(13, 167, 59);
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 2rem;
+#left-half {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(1.5rem, auto);
+  grid-template-areas:
+    "front front back back"
+    "front front back back";
+  padding: 0.6rem;
+  gap: 0.625rem;
 }
 
-#left-half > #back-left{
-    background-color: rgb(168, 152, 8);
-    text-align: center;
-    padding: 1.5rem ;
-    font-size: 1rem;
+#left-half > #front-left {
+  background-color: rgba(13, 167, 59);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+
+#left-half > #back-left {
+  background-color: rgb(168, 152, 8);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
 }
 
 #front-left {
-    display: grid;
-    grid-template-areas: 'kitchen kitchen kitchen kitchen'
-    'seating seating seating seating';
-    background-color: crimson;
-    padding: .2rem;
-    gap:.625rem ;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(1.5rem, auto);
+  grid-template-areas:
+    "kitchen kitchen kitchen kitchen"
+    "seating seating seating seating";
+  background-color: crimson;
+  padding: 0.2rem;
+  gap: 0.625rem;
 }
 
-#steam{grid-area: steam;}
-#toast{grid-area: toast;}
-#utility{grid-area: utility;}
-#register{grid-area: register;}
-#work{grid-area: work;}
-
-#kitchen-area{
-    display:grid;
-grid-template-areas:'work utility toast toast'
-'steam steam register register' ;
-background-color: thistle;
-padding: .2rem;
-gap:.625em ;
-font-size: 1rem;
-
+#steam {
+  grid-area: steam;
 }
-#kitchen-area > div{
-display:grid;
-background-color: blueviolet;
-padding: .2rem;
-gap:.625em ;
-font-size: 1rem;
+#toast {
+  grid-area: toast;
+}
+#utility {
+  grid-area: utility;
+}
+#register {
+  grid-area: register;
+}
+#work {
+  grid-area: work;
+}
 
+#kitchen-area {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: minmax(1.5rem, auto);
+  grid-template-areas:
+    "work work work . . utility utility toast toast toast "
+    ". . . . . . . . . ."
+    "steam steam steam steam steam . . register register register ";
+  background-color: thistle;
+  padding: 0.2rem;
+  gap: 0.625em;
+  font-size: 1rem;
+}
+#kitchen-area > div {
+  display: grid;
+  background-color: blueviolet;
+  padding: 0.2rem;
+  gap: 0.625em;
+  font-size: 1rem;
 }

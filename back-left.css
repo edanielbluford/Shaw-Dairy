@@ -1,0 +1,41 @@
+#wash {
+  grid-area: wash;
+}
+#grill {
+  grid-area: grill;
+}
+#counter {
+  grid-area: counter;
+}
+#stove {
+  grid-area: stove;
+}
+#shelf {
+  grid-area: shelf;
+}
+#restroom {
+  grid-area: rest;
+}
+#exit {
+  grid-area: exit;
+}
+
+#back-left {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(6.25rem, auto);
+  grid-template-areas:
+    "grill grill grill grill stove stove stove stove  ."
+    ". . . . . . . . ."
+    "counter counter counter . . . . . ."
+    "wash wash wash . . . . shelf shelf "
+    "wash wash wash . . . . shelf shelf"
+    ". . . . . . . . exit"
+    "rest rest . . . . . . .";
+}
+
+.left-kitchen {
+  border-style: outset;
+  border-width: 0.4rem;
+  border-color: black;
+}
