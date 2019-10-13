@@ -1,0 +1,16 @@
+#seat-1{grid-area: one;}
+#seat-2{grid-area: two;}
+#seat-3{grid-area: three;}
+#seat-4{grid-area: four;}
+
+#seating-area{
+    display:grid;
+    grid-template-areas: 'one two'
+    'three four';
+}
+#seating-area > div{
+    background-color: blueviolet;
+    padding: .2rem;
+    gap:.625em ;
+    font-size: 1rem; 
+}

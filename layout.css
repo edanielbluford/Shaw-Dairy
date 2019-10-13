@@ -1,0 +1,30 @@
+#left-half {grid-area: left;}
+#right-half {grid-area: right;}
+
+#grid-container{
+    display:grid;
+    
+    grid-template-areas:'left left left left'
+    'right right right right';
+    
+    background-color: #2196F3;
+    padding: .2rem;
+    gap:.625rem ;
+    
+    
+}
+
+#grid-container > #left-half{
+    background-color: rgba(44, 16, 206, 0.8);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+#grid-container > #right-half{
+    background-color: rgb(158, 8, 8);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+
